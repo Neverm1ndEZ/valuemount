@@ -58,7 +58,7 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<h2 className="absolute bottom-6 -left-48 text-2xl md:text-[96px] font-bold text-[#AD8330]">
+					<h2 className="hidden md:block absolute bottom-6 -left-48 text-2xl md:text-[96px] font-bold text-[#AD8330]">
 						MISSION
 					</h2>
 				</div>
@@ -89,7 +89,7 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<h2 className="absolute bottom-6 -right-48 text-2xl md:text-[96px] font-bold text-[#AD8330]">
+					<h2 className="hidden md:block absolute bottom-6 -right-48 text-2xl md:text-[96px] font-bold text-[#AD8330]">
 						VISION
 					</h2>
 				</div>
