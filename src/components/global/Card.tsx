@@ -1,24 +1,26 @@
-import Image from 'next/image'
-import React from 'react'
+import React from "react";
+import Image from "next/image"; // or regular <img> if you prefer
 
 interface CardProps {
-  heading: string
-  icon: string
-  description: string
+	heading: string;
+	icon: string;
+	description: string;
 }
 
-const Card: React.FC<CardProps> = ({ heading, icon, description }) => {
-  return (
-    <div className='bg-[url(/Texture.svg)] bg-cover max-w-[335px] bg-[#d8d8d8] rounded-xl px-8 pt-6 pb-12 space-y-9'>
-      <div className='w-full flex items-center justify-between'>
-        <h1 className='text-[#AD8330] text-2xl font-bold font-main'>{heading}</h1>
-        <Image src={icon} alt='icon' width={50} height={50} />
-      </div>
-      <div>
-        <p className='text-[#1B1B1B] font-meta text-sm'>{description}</p>
-      </div>
-    </div>
-  )
-}
+export default function Card({ heading, icon, description }: CardProps) {
+	return (
+		<div className="flex flex-col items-start p-6 bg-[#dcdcdcaf] rounded-md shadow-sm hover:shadow-md transition-shadow">
+			{/* Icon in a circle */}
+			<div className="mb-4 flex items-center justify-between w-full">
+				{/* If using next/image, adjust width/height */}
+				<h2 className="text-[#AD8330] text-xl font-bold mb-2">{heading}</h2>
+				<Image src={icon} alt={heading} width={52} height={52} />
+			</div>
 
-export default Card
+			{/* Heading in gold */}
+
+			{/* Description */}
+			<p className="text-gray-700 leading-relaxed">{description}</p>
+		</div>
+	);
+}

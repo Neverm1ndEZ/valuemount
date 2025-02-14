@@ -1,10 +1,16 @@
 import React from "react";
 import CustomButton from "../global/button";
 import InfiniteScrollCarousel from "./InfiniteScrollCarousel"; // adjust path as needed
+import Collection from "./processes/Collection";
+import Purification from "./processes/Purification";
+import QualityTesting from "./processes/QualityTesting";
+import ShapingExcellence from "./processes/ShapingExcellence";
+import DeliveryWithTrust from "./processes/DeliveryWithTrust";
+import WhyValueMount from "./WhyValueMount";
 
 export default function Home() {
 	return (
-		<section className="max-7xl mx-auto min-h-screen pt-10 pb-24">
+		<section className="max-w-7xl mx-auto pt-10 pb-24 space-y-10">
 			<div className="">
 				{/* Carousel Section */}
 				<div className="mb-12">
@@ -12,7 +18,7 @@ export default function Home() {
 				</div>
 
 				{/* Headline & Description */}
-				<div className="flex items-center justify-center w-full ">
+				<div className="flex items-center justify-between w-full ">
 					<div className="space-y-4 md:w-1/2">
 						<h1 className="text-4xl text-[#AD8330] font-bold">Value Mount</h1>
 						<h2 className="text-xl text-[#000] font-bold">
@@ -30,6 +36,12 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			<Collection />
+			<Purification />
+			<QualityTesting />
+			<ShapingExcellence />
+			<DeliveryWithTrust />
+			<WhyValueMount />
 		</section>
 	);
 }
