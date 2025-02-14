@@ -5,7 +5,7 @@ import Pagination from "@/components/global/Pagination";
 
 export default function DeliveryWithTrust() {
 	return (
-		<section className="h-screen flex flex-col justify-center items-center space-y-10 sticky top-0 mb-[50%]">
+		<section className="h-screen flex flex-col justify-center items-center space-y-10 sticky top-0">
 			<div className="bg-white p-4">
 				<div className="flex justify-between items-center w-full">
 					<div>

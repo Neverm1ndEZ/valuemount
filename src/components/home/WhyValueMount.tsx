@@ -48,8 +48,8 @@ export default function WhyValueMount() {
 	];
 
 	return (
-		<section className="py-12 bg-white">
-			<div className="px-4">
+		<section className="py-12 h-screen flex flex-col justify-center items-center space-y-10 sticky top-0 mb-[50%]">
+			<div className="p-20 bg-white">
 				{/* Section Heading */}
 				<h1 className="text-[#AD8330] text-5xl font-bold mb-8">
 					Why ValueMount?
