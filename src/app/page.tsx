@@ -1,21 +1,21 @@
 import Home from "@/components/home/Home";
-import Collection from "@/components/home/processes/Collection";
-import DeliveryWithTrust from "@/components/home/processes/DeliveryWithTrust";
-import Purification from "@/components/home/processes/Purification";
-import QualityTesting from "@/components/home/processes/QualityTesting";
-import ShapingExcellence from "@/components/home/processes/ShapingExcellence";
-import WhyValueMount from "@/components/home/WhyValueMount";
+// import Collection from "@/components/home/processes/Collection";
+// import DeliveryWithTrust from "@/components/home/processes/DeliveryWithTrust";
+// import Purification from "@/components/home/processes/Purification";
+// import QualityTesting from "@/components/home/processes/QualityTesting";
+// import ShapingExcellence from "@/components/home/processes/ShapingExcellence";
+// import WhyValueMount from "@/components/home/WhyValueMount";
 
 export default function page() {
 	return (
-		<main className=" flex flex-col items-center justify-center w-full">
+		<main className="">
 			<Home />
-			<Collection />
+			{/* <Collection />
 			<Purification />
 			<QualityTesting />
 			<ShapingExcellence />
 			<DeliveryWithTrust />
-			<WhyValueMount />
+			<WhyValueMount /> */}
 		</main>
 	);
 }

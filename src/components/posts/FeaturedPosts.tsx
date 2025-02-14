@@ -73,16 +73,14 @@ const FeaturedPosts: React.FC = () => {
 				{/* Left column - Explore More */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 					<div className="space-y-8">
-						<h2 className="text-2xl font-semibold text-[#AD8330]">
-							Explore More
-						</h2>
+						<h2 className="text-2xl font-bold text-[#AD8330]">Explore More</h2>
 
 						{/* Blog post cards */}
 						<div className="space-y-8">
 							{posts.map((post, index) => (
 								<div
 									key={index}
-									className="flex space-x-4 group cursor-pointer"
+									className="flex items-end space-x-4 group cursor-pointer"
 								>
 									<div className="w-32 h-32 overflow-hidden rounded-lg">
 										<Image
@@ -94,10 +92,10 @@ const FeaturedPosts: React.FC = () => {
 										/>
 									</div>
 									<div className="flex-1">
-										<div className="flex items-center space-x-3 text-sm mb-2">
+										<div className="flex items-center gap-3 text-sm mb-2">
 											<span className="text-[#AD8330]">{post.category}</span>
-											<span className="text-gray-400">•</span>
-											<span className="text-gray-600">{post.date}</span>
+											<span className="text-[#AD8330] text-4xl">•</span>
+											<span className="text-[#1b1b1b]">{post.date}</span>
 										</div>
 										<h3 className="font-semibold text-lg mb-2 group-hover:text-[#AD8330] transition-colors">
 											{post.title}
@@ -113,7 +111,7 @@ const FeaturedPosts: React.FC = () => {
 
 					{/* Right column - In case you missed it */}
 					<div className="space-y-8">
-						<h2 className="text-2xl font-semibold text-[#AD8330]">
+						<h2 className="text-2xl font-bold text-[#A16A59]">
 							In case you missed it
 						</h2>
 
@@ -122,7 +120,7 @@ const FeaturedPosts: React.FC = () => {
 							{posts.slice(0, 2).map((post, index) => (
 								<div
 									key={index}
-									className="rounded-xl overflow-hidden bg-[#AD8330] text-white cursor-pointer group"
+									className="rounded-xl p-4 overflow-hidden bg-[#AD8330] text-white cursor-pointer group"
 								>
 									<div className="h-48 overflow-hidden">
 										<Image
@@ -130,19 +128,17 @@ const FeaturedPosts: React.FC = () => {
 											alt={post.title}
 											width={400}
 											height={192}
-											className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
+											className="w-full h-full rounded-xl object-cover transform transition-transform group-hover:scale-105"
 										/>
 									</div>
-									<div className="p-6">
-										<div className="flex items-center space-x-3 text-sm mb-2">
-											<span className="text-amber-200">{post.category}</span>
-											<span>•</span>
+									<div className="py-4">
+										<div className="flex items-center gap-x-3 text-sm mb-2 font-semibold">
+											<span className="max-w-[60px]">{post.category}</span>
+											<span className="text-4xl">•</span>
 											<span>{post.date}</span>
 										</div>
-										<h3 className="font-semibold text-xl mb-2">{post.title}</h3>
-										<p className="text-amber-100 text-sm line-clamp-2">
-											{post.description}
-										</p>
+										<h3 className="font-bold text-xl mb-2">{post.title}</h3>
+										<p className="text-sm">{post.description}</p>
 									</div>
 								</div>
 							))}

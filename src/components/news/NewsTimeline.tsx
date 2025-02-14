@@ -69,9 +69,13 @@ const NewsTimeline: React.FC = () => {
 					{newsItems.map((item, index) => (
 						<div key={index} className="relative">
 							{/* Date marker with responsive positioning and visibility */}
-							<div className="hidden md:block absolute left-0 w-48 text-right pr-8">
-								<div className="font-medium text-[#AD8330]">{item.month}</div>
-								<div className="text-gray-600">{item.year}</div>
+							<div className="hidden md:block absolute left-0 w-48 text-left pr-8">
+								<div className="font-bold text-xl text-[#AD8330]">
+									{item.month}
+								</div>
+								<div className="font-bold text-xl text-[#AD8330]">
+									{item.year}
+								</div>
 							</div>
 
 							{/* Timeline dot with responsive positioning */}
@@ -101,10 +105,10 @@ const NewsTimeline: React.FC = () => {
 
 										{/* Text content */}
 										<div className="flex-1">
-											<div className="text-sm text-[#AD8330] mb-2">
+											<div className="text-sm font-semibold text-[#AD8330] mb-2">
 												{item.date}
 											</div>
-											<h3 className="text-lg md:text-xl font-semibold mb-2 group-hover:text-[#AD8330] transition-colors">
+											<h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-[#AD8330] transition-colors">
 												{item.title}
 											</h3>
 											<p className="text-gray-600 text-sm">
