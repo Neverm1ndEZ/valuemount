@@ -54,9 +54,9 @@ const Assaying: React.FC = () => {
 							Accuracy, Absolute <br />
 							Trust
 						</h2>
-						<div className="text-6xl font-bold mb-4">
-							<span className="text-[#AD8330]">Assa</span>ying
-						</div>
+						<h2 className="absolute bottom-6 left-48 text-2xl md:text-[96px] font-bold text-[#AD8330]">
+							Assaying
+						</h2>
 					</div>
 					<div className="md:w-2/3">
 						<Image

@@ -26,9 +26,9 @@ export default function AboutUs() {
 	return (
 		<section className="w-full max-w-7xl mx-auto px-4 py-10">
 			{/* About Us Heading */}
-			<div className="mb-16 text-center">
+			<div className="mb-16">
 				<h1 className="text-5xl text-[#AD8330] font-bold mb-2">About Us</h1>
-				<p className="text-sm max-w-2xl mx-auto">
+				<p className="text-sm">
 					Discover Valuemount, where precision, integrity, and sustainability
 					define every aspect of our operations. As a leading gold refinery, we
 					take pride in setting new benchmarks for quality and responsibility in

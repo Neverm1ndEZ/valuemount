@@ -14,7 +14,7 @@ export default function Navbar() {
 	];
 
 	return (
-		<div className="bg-white sticky top-0 px-4 md:px-10 py-3 flex items-center justify-between border-b border-[#AD8330]">
+		<div className="px-4 md:px-10 py-3 flex items-center justify-between border-b border-[#AD8330]">
 			<div>
 				<Link href="/">
 					<Image src={"/logo.svg"} alt="ValueMount" width={62} height={56} />
