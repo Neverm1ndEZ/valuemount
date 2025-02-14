@@ -1,18 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
+import Assaying from "@/components/products/Assaying";
+import CustomSolutions from "@/components/products/CustomSolutions";
+import Refining from "@/components/products/Refining";
+import React from "react";
 
 export default function ProductsAndServices() {
-  return (
-    <section className=''>
-      <div>
-        <h1>Products and Services</h1>
-      </div>
-      <div className='flex items-center justify-between w-full'>
-        <div></div>
-        <div>
-          <Image src={'/refining.svg'} alt='Refining' width={774} height={345} />
-        </div>
-      </div>
-    </section>
-  )
+	return (
+		<div>
+			<Refining />
+			<Assaying />
+			<CustomSolutions />
+		</div>
+	);
 }

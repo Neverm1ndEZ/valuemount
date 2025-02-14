@@ -8,7 +8,7 @@ import WhyValueMount from "@/components/home/WhyValueMount";
 
 export default function page() {
 	return (
-		<main className=" flex flex-col items-center justify-center">
+		<main className=" flex flex-col items-center justify-center w-full">
 			<Home />
 			<Collection />
 			<Purification />
