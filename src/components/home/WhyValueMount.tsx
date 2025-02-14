@@ -48,15 +48,13 @@ export default function WhyValueMount() {
 	];
 
 	return (
-		<section className="py-12 h-screen flex flex-col justify-center items-center space-y-10 sticky top-0 mb-[50%]">
-			<div className="p-20 bg-white">
-				{/* Section Heading */}
-				<h1 className="text-[#AD8330] text-5xl font-bold mb-8">
+		<section className="py-6 md:py-12 min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0 mb-[25%] md:mb-[50%]">
+			<div className="p-4 md:p-20 bg-white w-full max-w-7xl">
+				<h1 className="text-[#AD8330] text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-center md:text-left">
 					Why ValueMount?
 				</h1>
 
-				{/* Cards Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
 					{cardData.map((card) => (
 						<Card
 							key={card.id}
