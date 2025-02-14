@@ -1,12 +1,13 @@
-import ContactForm from '@/components/contact/ContactForm'
-import ContactHero from '@/components/contact/ContactHero'
-import React from 'react'
+import ContactForm from "@/components/contact/ContactForm";
+import ContactHero from "@/components/contact/ContactHero";
 
-export default function Contact() {
-  return (
-    <div>
-      <ContactHero />
-      <ContactForm />
-    </div>
-  )
-}
+const ContactPage = () => {
+	return (
+		<div className="min-h-screen">
+			<ContactHero />
+			<ContactForm />
+		</div>
+	);
+};
+
+export default ContactPage;
