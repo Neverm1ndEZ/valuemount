@@ -6,15 +6,18 @@ export default function SectionNavigator() {
 	const [activeSection, setActiveSection] = useState(0);
 
 	// Array of section names matching your components
-	const sections = [
-		{ id: "hero", name: "Hero" },
-		{ id: "collection", name: "Collection" },
-		{ id: "purification", name: "Purification" },
-		{ id: "quality-testing", name: "Quality Testing" },
-		{ id: "shaping-excellence", name: "Shaping Excellence" },
-		{ id: "delivery-with-trust", name: "Delivery with Trust" },
-		{ id: "why-value-mount", name: "Why ValueMount" },
-	];
+	const sections = React.useMemo(
+		() => [
+			{ id: "hero", name: "Hero" },
+			{ id: "collection", name: "Collection" },
+			{ id: "purification", name: "Purification" },
+			{ id: "quality-testing", name: "Quality Testing" },
+			{ id: "shaping-excellence", name: "Shaping Excellence" },
+			{ id: "delivery-with-trust", name: "Delivery with Trust" },
+			{ id: "why-value-mount", name: "Why ValueMount" },
+		],
+		[],
+	);
 
 	// Function to handle click on a circle
 	const handleCircleClick = (index: number): void => {
