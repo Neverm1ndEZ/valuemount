@@ -5,7 +5,10 @@ import Pagination from "@/components/global/Pagination";
 
 export default function Purification() {
 	return (
-		<section className="min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0">
+		<section
+			id="purification"
+			className="min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0"
+		>
 			<div className="bg-white p-4 w-full max-w-7xl">
 				{/* Responsive header section */}
 				<div className="flex flex-col md:flex-row justify-between items-center w-full gap-4 md:gap-0">

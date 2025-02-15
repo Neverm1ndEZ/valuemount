@@ -48,7 +48,10 @@ export default function WhyValueMount() {
 	];
 
 	return (
-		<section className="py-6 md:py-12 min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0 mb-[25%] md:mb-[50%]">
+		<section
+			id="why-value-mount"
+			className="py-6 md:py-12 min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0 mb-[25%] md:mb-[50%]"
+		>
 			<div className="p-4 md:p-20 bg-white w-full">
 				<h1 className="text-[#AD8330] text-3xl md:text-5xl font-bold mb-4 md:mb-8 text-center md:text-left">
 					Why ValueMount?

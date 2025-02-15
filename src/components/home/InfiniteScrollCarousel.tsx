@@ -42,7 +42,7 @@ const carouselItems: CarouselItem[] = [
 	},
 	{
 		id: 6,
-		type: "video",
+		type: "image",
 		src: "/home-carousel/6.png",
 		alt: "Gold bar 3",
 	},
@@ -65,7 +65,7 @@ export default function InfiniteScrollCarousel() {
 									src={item.src}
 									alt={item.alt || "Carousel Image"}
 									fill
-									className="object-cover"
+									className="object-cover rounded-xl"
 									sizes="(max-width: 768px) 200px, 200px"
 								/>
 							) : (
@@ -74,7 +74,7 @@ export default function InfiniteScrollCarousel() {
 									autoPlay
 									loop
 									muted
-									className="w-full h-full object-cover"
+									className="w-full h-full object-cover rounded-xl"
 								/>
 							)}
 						</div>
@@ -92,7 +92,7 @@ export default function InfiniteScrollCarousel() {
 									src={item.src}
 									alt={item.alt || "Carousel Image"}
 									fill
-									className="object-cover"
+									className="object-cover rounded-xl"
 									sizes="(max-width: 768px) 200px, 200px"
 								/>
 							) : (
@@ -101,7 +101,7 @@ export default function InfiniteScrollCarousel() {
 									autoPlay
 									loop
 									muted
-									className="w-full h-full object-cover"
+									className="w-full h-full object-cover rounded-xl"
 								/>
 							)}
 						</div>
