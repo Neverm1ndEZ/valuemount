@@ -54,7 +54,7 @@ export default function InfiniteScrollCarousel() {
 			{/* The "track" that will scroll from right to left */}
 			<div className="flex w-[200%] animate-scroll">
 				{/* 1st copy of items */}
-				<div className="flex w-1/2">
+				<div className="flex">
 					{carouselItems.map((item) => (
 						<div
 							key={item.id}

@@ -37,12 +37,12 @@ export default function AboutUs() {
 			</div>
 
 			{/* MISSION - Mobile Heading */}
-			<div className="block md:hidden mb-4">
+			<div className="block lg:hidden mb-4">
 				<h2 className="text-3xl text-[#AD8330] font-bold">MISSION</h2>
 			</div>
 
 			{/* MISSION - Desktop & Content */}
-			<div className="flex flex-col md:flex-row items-start justify-between mb-16 gap-6">
+			<div className="flex flex-col lg:flex-row items-start justify-between mb-16 gap-6">
 				{/* Mission Text */}
 				<div className="lg:max-w-md font-meta text-base">
 					<p>
@@ -55,7 +55,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 				{/* Mission Image + Absolute Text */}
-				<div className="relative w-full md:w-auto">
+				<div className="relative w-full lg:w-auto">
 					<Image
 						src="/mission.svg"
 						alt="Mission Image"
@@ -63,12 +63,12 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<div className="hidden md:flex absolute bottom-6 -left-48">
-						<h2 className="text-2xl md:text-[96px] font-bold text-[#AD8330]">
+					<div className="hidden lg:flex absolute bottom-6 -left-48">
+						<h2 className="text-2xl lg:text-[96px] font-bold text-[#AD8330]">
 							MIS
 						</h2>
 						<h2
-							className="text-2xl md:text-[96px] font-bold text-transparent"
+							className="text-2xl lg:text-[96px] font-bold text-transparent"
 							style={{ WebkitTextStroke: "1px white" }}
 						>
 							SION
@@ -78,12 +78,12 @@ export default function AboutUs() {
 			</div>
 
 			{/* VISION - Mobile Heading */}
-			<div className="block md:hidden mb-4">
+			<div className="block lg:hidden mb-4">
 				<h2 className="text-3xl text-[#AD8330] font-bold">VISION</h2>
 			</div>
 
 			{/* VISION - Desktop & Content */}
-			<div className="flex flex-col md:flex-row-reverse items-start justify-between gap-6 mb-16">
+			<div className="flex flex-col lg:flex-row-reverse items-start justify-between gap-6 mb-16">
 				{/* Vision Text */}
 				<div className="lg:max-w-md font-meta text-base">
 					<p>
@@ -99,7 +99,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 				{/* Vision Image + Absolute Text */}
-				<div className="relative w-full md:w-auto">
+				<div className="relative w-full lg:w-auto">
 					<Image
 						src="/vision.svg"
 						alt="Vision Image"
@@ -107,14 +107,14 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<div className="hidden md:flex absolute bottom-6 -right-48">
+					<div className="hidden lg:flex absolute bottom-6 -right-48">
 						<h2
-							className="text-2xl md:text-[96px] font-bold text-transparent"
+							className="text-2xl lg:text-[96px] font-bold text-transparent"
 							style={{ WebkitTextStroke: "1px white" }}
 						>
 							VIS
 						</h2>
-						<h2 className="text-2xl md:text-[96px] font-bold text-[#AD8330]">
+						<h2 className="text-2xl lg:text-[96px] font-bold text-[#AD8330]">
 							ION
 						</h2>
 					</div>
@@ -122,16 +122,16 @@ export default function AboutUs() {
 			</div>
 
 			{/* Meet the Team - Responsive heading */}
-			<div className="block md:hidden mb-4">
+			<div className="block lg:hidden mb-4">
 				<h2 className="text-3xl text-[#AD8330] font-bold mb-4">
 					Meet the Team
 				</h2>
 			</div>
 
 			{/* Meet the Team */}
-			<div className="flex flex-col md:flex-row justify-between items-center w-full gap-8 mb-16">
-				<div className="md:w-[245px] hidden md:block">
-					<h1 className="text-4xl md:text-[96px] text-[#AD8330] font-bold leading-tight mb-4">
+			<div className="flex flex-col lg:flex-row justify-between items-center w-full gap-8 mb-16">
+				<div className="lg:w-[245px] hidden lg:block">
+					<h1 className="text-4xl lg:text-[96px] text-[#AD8330] font-bold leading-tight mb-4">
 						Meet the Team
 					</h1>
 					<p className="font-meta text-base">
@@ -142,7 +142,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 				{/* Mobile version of the team description */}
-				<div className="block md:hidden mb-4">
+				<div className="block lg:hidden mb-4">
 					<p className="font-meta text-base">
 						Meet the visionaries driving Valuemount forward. Our leadership team
 						is composed of industry experts and innovators who bring decades of
@@ -150,7 +150,7 @@ export default function AboutUs() {
 						to quality, sustainability, and customer satisfaction.
 					</p>
 				</div>
-				<div className="w-full md:w-auto">
+				<div className="w-full lg:w-auto">
 					<Image
 						src="/team.svg"
 						alt="Team Members"
@@ -163,7 +163,7 @@ export default function AboutUs() {
 
 			{/* Corporate Social Responsibility (CSR) */}
 			<div>
-				<h1 className="text-3xl md:text-5xl text-[#AD8330] text-center font-bold mb-2">
+				<h1 className="text-3xl lg:text-5xl text-[#AD8330] text-center font-bold mb-2">
 					Corporate Social Responsibility (CSR)
 				</h1>
 				<div className="flex justify-center items-center mb-9">
@@ -175,7 +175,7 @@ export default function AboutUs() {
 						className="w-full h-auto"
 					/>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
 					{cardItems.map(({ id, heading, description }) => (
 						<div
 							key={id}

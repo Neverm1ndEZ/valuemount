@@ -21,16 +21,16 @@ const NewsTimeline: React.FC = () => {
 			title: "Global Gold Demand Reaches Record High in 2024",
 			description:
 				"The global gold market has witnessed an unprecedented rise in demand, with investors and industries driving the surge. Valuemount continues to meet this demand with unmatched quality and precision in gold refining.",
-			imageUrl: "/gold-graph.jpg",
+			imageUrl: "/news/1.svg",
 		},
 		{
 			date: "22 November 2024",
-			month: "Nov",
-			year: "2024",
+			month: "",
+			year: "",
 			title: "Valuemount Unveils AI-Powered Refining Solutions",
 			description:
 				"Valuemount has integrated AI technology into its refining processes, ensuring superior precision, reduced waste, and enhanced efficiency. This marks a major step in combining tradition with innovation.",
-			imageUrl: "/ai-refining.jpg",
+			imageUrl: "/news/2.svg",
 		},
 		{
 			date: "30 September 2024",
@@ -39,16 +39,16 @@ const NewsTimeline: React.FC = () => {
 			title: "Valuemount Becomes a Leader in Sustainable Refining Practices",
 			description:
 				"Sustainability is at the heart of Valuemount's operations. With innovative eco-friendly techniques, we are setting benchmarks in reducing environmental impact without compromising quality.",
-			imageUrl: "/sustainable.jpg",
+			imageUrl: "/news/3.svg",
 		},
 		{
 			date: "5 September 2024",
-			month: "Sept",
-			year: "2024",
+			month: "",
+			year: "",
 			title: "Strategic Collaboration with Jewelers Across the Globe",
 			description:
 				"Valuemount has partnered with leading jewelers worldwide, supplying them with premium refined gold that inspires the creation of timeless pieces.Valuemount is now offering bespoke gold products tailored for niche markets, catering to unique needs with precision and creativity.",
-			imageUrl: "/globe.jpg",
+			imageUrl: "/news/4.svg",
 		},
 	];
 
@@ -95,7 +95,7 @@ const NewsTimeline: React.FC = () => {
 										{/* Image with responsive sizing */}
 										<div className="w-full md:w-32 h-48 md:h-32 overflow-hidden rounded-lg">
 											<Image
-												src="/refining.svg"
+												src={item.imageUrl}
 												alt={item.title}
 												width={384}
 												height={384}

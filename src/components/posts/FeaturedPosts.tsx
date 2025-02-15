@@ -20,7 +20,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "The Science of Gold Refining: What Makes It Pure?",
 			description:
 				"Ever wondered how raw gold is transformed into its purest form? Discover the intricate process of gold refining, where precision meets innovation. Learn about the technologies we use...",
-			imageUrl: "/refinery.jpg",
+			imageUrl: "/featured/1.svg",
 		},
 		{
 			category: "Assaying",
@@ -28,7 +28,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "Custom Gold Solutions: Turning Ideas into Reality",
 			description:
 				"Your vision deserves the best execution. From bespoke designs to personalized compositions, explore how our custom gold solutions cater to your unique needs.",
-			imageUrl: "/gold-bars.jpg",
+			imageUrl: "/featured/2.svg",
 		},
 		{
 			category: "Industry Insights",
@@ -36,7 +36,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "How to Choose the Right Refining Partner",
 			description:
 				"What should you look for in a gold refining partner? From trust to technology, explore the key factors that make Valuemount a leader in the industry.",
-			imageUrl: "/gold-stack.jpg",
+			imageUrl: "/featured/3.svg",
 		},
 		{
 			category: "Gold Refining",
@@ -44,7 +44,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "The Science of Gold Refining: What Makes It Pure?",
 			description:
 				"Ever wondered how raw gold is transformed into its purest form? Discover the intricate process of gold refining, where precision meets innovation. Learn about the technologies we use...",
-			imageUrl: "/refinery.jpg",
+			imageUrl: "/featured/1.svg",
 		},
 		{
 			category: "Assaying",
@@ -52,7 +52,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "Custom Gold Solutions: Turning Ideas into Reality",
 			description:
 				"Your vision deserves the best execution. From bespoke designs to personalized compositions, explore how our custom gold solutions cater to your unique needs.",
-			imageUrl: "/gold-bars.jpg",
+			imageUrl: "/featured/2.svg",
 		},
 		{
 			category: "Industry Insights",
@@ -60,7 +60,7 @@ const FeaturedPosts: React.FC = () => {
 			title: "How to Choose the Right Refining Partner",
 			description:
 				"What should you look for in a gold refining partner? From trust to technology, explore the key factors that make Valuemount a leader in the industry.",
-			imageUrl: "/gold-stack.jpg",
+			imageUrl: "/featured/3.svg",
 		},
 	];
 
@@ -84,7 +84,7 @@ const FeaturedPosts: React.FC = () => {
 								>
 									<div className="w-32 h-32 overflow-hidden rounded-lg">
 										<Image
-											src="/refining.svg"
+											src={post.imageUrl}
 											alt={post.title}
 											width={128}
 											height={128}
@@ -93,9 +93,13 @@ const FeaturedPosts: React.FC = () => {
 									</div>
 									<div className="flex-1">
 										<div className="flex items-center gap-3 text-sm mb-2">
-											<span className="text-[#AD8330]">{post.category}</span>
+											<span className="text-[#AD8330] font-semibold">
+												{post.category}
+											</span>
 											<span className="text-[#AD8330] text-4xl">•</span>
-											<span className="text-[#1b1b1b]">{post.date}</span>
+											<span className="text-[#1b1b1b] font-semibold">
+												{post.date}
+											</span>
 										</div>
 										<h3 className="font-semibold text-lg mb-2 group-hover:text-[#AD8330] transition-colors">
 											{post.title}
@@ -124,7 +128,7 @@ const FeaturedPosts: React.FC = () => {
 								>
 									<div className="h-48 overflow-hidden">
 										<Image
-											src="/refining.svg"
+											src={post.imageUrl}
 											alt={post.title}
 											width={400}
 											height={192}
