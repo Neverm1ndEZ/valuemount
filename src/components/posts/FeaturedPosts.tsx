@@ -124,13 +124,13 @@ const FeaturedPosts: React.FC = () => {
 							{posts.slice(0, 2).map((post, index) => (
 								<div
 									key={index}
-									className="rounded-xl p-4 overflow-hidden bg-[#AD8330] text-white cursor-pointer group"
+									className="rounded-xl p-4 lg:max-w-[416px] overflow-hidden bg-[#ad8330d2] text-white cursor-pointer group"
 								>
 									<div className="h-48 overflow-hidden">
 										<Image
 											src={post.imageUrl}
 											alt={post.title}
-											width={400}
+											width={300}
 											height={192}
 											className="w-full h-full rounded-xl object-cover transform transition-transform group-hover:scale-105"
 										/>

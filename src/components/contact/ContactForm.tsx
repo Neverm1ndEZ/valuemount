@@ -52,7 +52,7 @@ export default function ContactForm() {
 						</form>
 					</div>
 					{/* Image Section */}
-					<div className="relative h-64 md:h-auto">
+					<div className="hidden md:block relative h-64 md:h-auto">
 						<Image
 							src="/contactForm.svg"
 							alt="Gold bars on red velvet"

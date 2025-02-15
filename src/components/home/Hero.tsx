@@ -16,14 +16,14 @@ export default function Hero() {
 				{/* Left content section - Full width on mobile */}
 				<div className="space-y-4 w-full md:w-1/2">
 					{/* Responsive typography for better readability */}
-					<h1 className="text-3xl md:text-4xl lg:text-5xl text-[#AD8330] font-bold">
+					<h1 className="text-3xl md:text-4xl lg:text-5xl text-[#AD8330] font-bold text-center lg:text-left">
 						Value Mount
 					</h1>
-					<h2 className="text-lg md:text-xl lg:text-2xl text-[#000] font-bold">
+					<h2 className="text-lg md:text-xl lg:text-2xl text-[#000] font-bold text-center lg:text-left">
 						Refining Gold with Precision and Integrity
 					</h2>
 					{/* Added margin for better spacing on mobile */}
-					<div className="mt-6 md:mt-4">
+					<div className="mt-6 md:mt-4 lg:block flex items-center justify-center w-full">
 						<CustomButton>Discover Our Process</CustomButton>
 					</div>
 				</div>

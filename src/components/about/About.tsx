@@ -24,7 +24,7 @@ export default function AboutUs() {
 	];
 
 	return (
-		<section className="w-full max-w-7xl mx-auto px-4 py-10">
+		<section className="w-full max-w-7xl mx-auto px-4 py-10 text-center lg:text-left">
 			{/* About Us Heading */}
 			<div className="mb-16">
 				<h1 className="text-5xl text-[#AD8330] font-bold mb-2">About Us</h1>
