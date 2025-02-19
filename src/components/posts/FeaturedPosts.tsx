@@ -3,66 +3,32 @@ import React from "react";
 
 // Define TypeScript interfaces for our data structures
 interface BlogPost {
+	title: string;
 	category: string;
 	date: string;
-	title: string;
 	description: string;
 	imageUrl: string;
+	$id: string;
+	$createdAt: string;
+	$updatedAt: string;
 }
 
+// Helper function to format the date
+const formatDate = (dateString: string) => {
+	const date = new Date(dateString);
+	return date.toLocaleDateString("en-US", {
+		day: "numeric",
+		month: "long",
+		year: "numeric",
+	});
+};
+
 // Main featured posts component
-const FeaturedPosts: React.FC = () => {
-	// Sample data - in a real app, this would likely come from props or an API
-	const posts: BlogPost[] = [
-		{
-			category: "Gold Refining",
-			date: "28 November 2024",
-			title: "The Science of Gold Refining: What Makes It Pure?",
-			description:
-				"Ever wondered how raw gold is transformed into its purest form? Discover the intricate process of gold refining, where precision meets innovation. Learn about the technologies we use...",
-			imageUrl: "/featured/1.svg",
-		},
-		{
-			category: "Assaying",
-			date: "28 November 2024",
-			title: "Custom Gold Solutions: Turning Ideas into Reality",
-			description:
-				"Your vision deserves the best execution. From bespoke designs to personalized compositions, explore how our custom gold solutions cater to your unique needs.",
-			imageUrl: "/featured/2.svg",
-		},
-		{
-			category: "Industry Insights",
-			date: "28 November 2024",
-			title: "How to Choose the Right Refining Partner",
-			description:
-				"What should you look for in a gold refining partner? From trust to technology, explore the key factors that make Valuemount a leader in the industry.",
-			imageUrl: "/featured/3.svg",
-		},
-		{
-			category: "Gold Refining",
-			date: "28 November 2024",
-			title: "The Science of Gold Refining: What Makes It Pure?",
-			description:
-				"Ever wondered how raw gold is transformed into its purest form? Discover the intricate process of gold refining, where precision meets innovation. Learn about the technologies we use...",
-			imageUrl: "/featured/1.svg",
-		},
-		{
-			category: "Assaying",
-			date: "28 November 2024",
-			title: "Custom Gold Solutions: Turning Ideas into Reality",
-			description:
-				"Your vision deserves the best execution. From bespoke designs to personalized compositions, explore how our custom gold solutions cater to your unique needs.",
-			imageUrl: "/featured/2.svg",
-		},
-		{
-			category: "Industry Insights",
-			date: "28 November 2024",
-			title: "How to Choose the Right Refining Partner",
-			description:
-				"What should you look for in a gold refining partner? From trust to technology, explore the key factors that make Valuemount a leader in the industry.",
-			imageUrl: "/featured/3.svg",
-		},
-	];
+const FeaturedPosts: React.FC<{ blogs: BlogPost[] }> = ({ blogs }) => {
+	// Ensure we have data to display
+	if (!blogs || blogs.length === 0) {
+		return <div>No posts available</div>;
+	}
 
 	return (
 		<div className="max-w-7xl mx-auto px-4 py-12">
@@ -77,9 +43,9 @@ const FeaturedPosts: React.FC = () => {
 
 						{/* Blog post cards */}
 						<div className="space-y-8">
-							{posts.map((post, index) => (
+							{blogs.map((post) => (
 								<div
-									key={index}
+									key={post.$id}
 									className="flex items-end space-x-4 group cursor-pointer"
 								>
 									<div className="w-32 h-32 overflow-hidden rounded-lg">
@@ -94,11 +60,11 @@ const FeaturedPosts: React.FC = () => {
 									<div className="flex-1">
 										<div className="flex items-center gap-3 text-sm mb-2">
 											<span className="text-[#AD8330] font-semibold">
-												{post.category}
+												{post.category.trim()}
 											</span>
 											<span className="text-[#AD8330] text-4xl">•</span>
 											<span className="text-[#1b1b1b] font-semibold">
-												{post.date}
+												{formatDate(post.date)}
 											</span>
 										</div>
 										<h3 className="font-semibold text-lg mb-2 group-hover:text-[#AD8330] transition-colors">
@@ -121,9 +87,9 @@ const FeaturedPosts: React.FC = () => {
 
 						{/* Featured cards */}
 						<div className="space-y-6">
-							{posts.slice(0, 2).map((post, index) => (
+							{blogs.slice(0, 2).map((post) => (
 								<div
-									key={index}
+									key={post.$id}
 									className="rounded-xl p-4 lg:max-w-[416px] overflow-hidden bg-[#ad8330d2] text-white cursor-pointer group"
 								>
 									<div className="h-48 overflow-hidden">
@@ -137,9 +103,11 @@ const FeaturedPosts: React.FC = () => {
 									</div>
 									<div className="py-4">
 										<div className="flex items-center gap-x-3 text-sm mb-2 font-semibold">
-											<span className="max-w-[60px]">{post.category}</span>
+											<span className="max-w-[60px]">
+												{post.category.trim()}
+											</span>
 											<span className="text-4xl">•</span>
-											<span>{post.date}</span>
+											<span>{formatDate(post.date)}</span>
 										</div>
 										<h3 className="font-bold text-xl mb-2">{post.title}</h3>
 										<p className="text-sm">{post.description}</p>
