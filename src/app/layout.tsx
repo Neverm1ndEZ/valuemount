@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
+import SplashScreen from "@/components/SplashScreen";
 
 const montserrat = Montserrat({
 	variable: "--main-font",
@@ -31,7 +33,9 @@ export default function RootLayout({
 				className={`${montserrat.variable} ${mulish.variable} antialiased font-main`}
 			>
 				<Navbar />
-				<div className="mt-24 lg:mt-32">{children}</div>
+				<Suspense fallback={<SplashScreen />}>
+					<div className="mt-24 lg:mt-32">{children}</div>
+				</Suspense>
 			</body>
 		</html>
 	);
