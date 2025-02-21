@@ -8,6 +8,7 @@ export default function Navbar() {
 	const menuRef = useRef(null);
 
 	const navItems = [
+		{ label: "Home", href: "/" },
 		{ label: "About Us", href: "/about-us" },
 		{ label: "Products & Services", href: "/products-and-services" },
 		{ label: "Sustainability", href: "/sustainability" },
@@ -53,7 +54,7 @@ export default function Navbar() {
 		>
 			<div>
 				<Link href="/">
-					<Image src={"/logo.svg"} alt="ValueMount" width={62} height={56} />
+					<Image src={"/logo.svg"} alt="ValueMount" width={100} height={100} />
 				</Link>
 			</div>
 

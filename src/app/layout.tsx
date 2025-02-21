@@ -4,35 +4,35 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const montserrat = Montserrat({
-  variable: "--main-font",
-  subsets: ['latin'],
-  display: 'swap',
+	variable: "--main-font",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 const mulish = Mulish({
-  variable: "--meta-font",
-  subsets: ['latin'],
-  display: 'swap',
+	variable: "--meta-font",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Value Mount Lixiviate",
-  description: "Gold",
+	title: "Value Mount Lixiviate",
+	description: "Gold",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${montserrat.variable} ${mulish.variable} antialiased font-main`}
-      >
-        <Navbar />
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body
+				className={`${montserrat.variable} ${mulish.variable} antialiased font-main`}
+			>
+				<Navbar />
+				<div className="mt-24 lg:mt-32">{children}</div>
+			</body>
+		</html>
+	);
 }

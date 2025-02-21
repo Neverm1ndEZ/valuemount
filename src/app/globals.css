@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure the navbar stays fixed at the top */
+div[class*="border-b border-[#AD8330]"] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	z-index: 100;
+}
+
+/* Ensure proper stacking context for mobile menu */
+div[class*="absolute top-[72px]"] {
+	z-index: 99;
+}
+
+/* Smooth scrolling for better experience */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow */
+body {
+	overflow-x: hidden;
+}
