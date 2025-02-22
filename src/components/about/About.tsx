@@ -63,7 +63,7 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<div className="hidden lg:flex absolute bottom-6 -left-48">
+					<div className="hidden lg:flex absolute bottom-3 -left-40">
 						<h2 className="text-2xl lg:text-[96px] font-bold text-[#AD8330]">
 							MIS
 						</h2>
@@ -107,7 +107,7 @@ export default function AboutUs() {
 						height={345}
 						className="w-full h-auto"
 					/>
-					<div className="hidden lg:flex absolute bottom-6 -right-48">
+					<div className="hidden lg:flex absolute bottom-3 -right-40">
 						<h2
 							className="text-2xl lg:text-[96px] font-bold text-transparent"
 							style={{ WebkitTextStroke: "1px white" }}

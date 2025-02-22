@@ -67,7 +67,7 @@ const Assaying: React.FC = () => {
 						/>
 					</div>
 				</div>
-				<div className="hidden lg:flex absolute bottom-8 left-48">
+				<div className="hidden lg:flex absolute bottom-6 left-56">
 					<h2 className="text-2xl lg:text-[96px] font-bold text-[#AD8330]">
 						Assa
 					</h2>

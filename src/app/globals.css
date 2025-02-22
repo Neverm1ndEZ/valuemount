@@ -26,3 +26,25 @@ html {
 body {
 	overflow-x: hidden;
 }
+
+/* Apply Cabinet Grotesk as the main font */
+.font-main {
+	font-family: var(--main-font);
+}
+
+/* Example usage of different weights */
+.light {
+	font-weight: 300; /* Light weight */
+}
+
+.regular {
+	font-weight: 400; /* Regular weight */
+}
+
+.bold {
+	font-weight: 700; /* Bold weight */
+}
+
+.extrabold {
+	font-weight: 800; /* Extra Bold weight */
+}

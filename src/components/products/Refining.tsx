@@ -74,7 +74,7 @@ const Refining: React.FC = () => {
 						/>
 					</div>
 				</div>
-				<div className="hidden lg:flex absolute bottom-6 left-56">
+				<div className="hidden lg:flex absolute bottom-4 left-64">
 					<h2 className="text-2xl lg:text-[96px] font-bold text-[#AD8330]">
 						REF
 					</h2>

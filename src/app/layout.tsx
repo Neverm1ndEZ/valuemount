@@ -1,20 +1,39 @@
 import type { Metadata } from "next";
-import { Montserrat, Mulish } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Suspense } from "react";
 import SplashScreen from "@/components/SplashScreen";
+import Footer from "@/components/Footer";
 
-const montserrat = Montserrat({
-	variable: "--main-font",
-	subsets: ["latin"],
-	display: "swap",
+// Configure Cabinet Grotesk as the main font
+const cabinet = localFont({
+	src: [
+		{
+			path: "./fonts/cabinet/Fonts/TTF/CabinetGrotesk-Variable.ttf",
+			weight: "100 900", // Specify the weight range for the variable font
+			style: "normal",
+		},
+	],
+	variable: "--main-font", // Main font variable
 });
 
-const mulish = Mulish({
-	variable: "--meta-font",
-	subsets: ["latin"],
-	display: "swap",
+// Configure Gilroy as the meta font
+const gilroy = localFont({
+	src: [
+		{
+			path: "./fonts/gilroy/Gilroy-Light.otf",
+			weight: "300",
+			style: "normal",
+		},
+		{
+			path: "./fonts/gilroy/Gilroy-ExtraBold.otf",
+			weight: "800",
+			style: "normal",
+		},
+		// Add other weights as needed
+	],
+	variable: "--meta-font", // Meta font variable
 });
 
 export const metadata: Metadata = {
@@ -30,12 +49,13 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${montserrat.variable} ${mulish.variable} antialiased font-main`}
+				className={`${cabinet.variable} ${gilroy.variable} antialiased font-main`}
 			>
 				<Navbar />
 				<Suspense fallback={<SplashScreen />}>
 					<div className="mt-24 lg:mt-32">{children}</div>
 				</Suspense>
+				<Footer />
 			</body>
 		</html>
 	);
