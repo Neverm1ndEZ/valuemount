@@ -1,5 +1,7 @@
-import Image from "next/image";
-import React from "react";
+// components/posts/FeaturedPosts.tsx
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 // Define TypeScript interfaces for our data structures
 interface BlogPost {
@@ -16,10 +18,10 @@ interface BlogPost {
 // Helper function to format the date
 const formatDate = (dateString: string) => {
 	const date = new Date(dateString);
-	return date.toLocaleDateString("en-US", {
-		day: "numeric",
-		month: "long",
-		year: "numeric",
+	return date.toLocaleDateString('en-US', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
 	});
 };
 
@@ -44,37 +46,36 @@ const FeaturedPosts: React.FC<{ blogs: BlogPost[] }> = ({ blogs }) => {
 						{/* Blog post cards */}
 						<div className="space-y-8">
 							{blogs.map((post) => (
-								<div
-									key={post.$id}
-									className="flex items-end space-x-4 group cursor-pointer"
-								>
-									<div className="w-32 h-32 overflow-hidden rounded-lg">
-										<Image
-											src={post.imageUrl}
-											alt={post.title}
-											width={128}
-											height={128}
-											className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
-										/>
-									</div>
-									<div className="flex-1">
-										<div className="flex items-center gap-3 text-sm mb-2">
-											<span className="text-[#AD8330] font-semibold">
-												{post.category.trim()}
-											</span>
-											<span className="text-[#AD8330] text-4xl">•</span>
-											<span className="text-[#1b1b1b] font-semibold">
-												{formatDate(post.date)}
-											</span>
+								<Link href={`/sustainability/${post.$id}`} key={post.$id} className='space-y-8'>
+									<div className="flex items-end space-x-4 space-y-8 group cursor-pointer">
+										<div className="w-32 h-32 overflow-hidden rounded-lg">
+											<Image
+												src={post.imageUrl}
+												alt={post.title}
+												width={128}
+												height={128}
+												className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
+											/>
 										</div>
-										<h3 className="font-semibold text-lg mb-2 group-hover:text-[#AD8330] transition-colors">
-											{post.title}
-										</h3>
-										<p className="text-gray-600 text-sm line-clamp-2">
-											{post.description}
-										</p>
+										<div className="flex-1">
+											<div className="flex items-center gap-3 text-sm mb-2">
+												<span className="text-[#AD8330] font-semibold">
+													{post.category.trim()}
+												</span>
+												<span className="text-[#AD8330] text-4xl">•</span>
+												<span className="text-[#1b1b1b] font-semibold">
+													{formatDate(post.date)}
+												</span>
+											</div>
+											<h3 className="font-semibold text-lg mb-2 group-hover:text-[#AD8330] transition-colors">
+												{post.title}
+											</h3>
+											<p className="text-gray-600 text-sm line-clamp-2">
+												{post.description}
+											</p>
+										</div>
 									</div>
-								</div>
+								</Link>
 							))}
 						</div>
 					</div>
@@ -88,31 +89,30 @@ const FeaturedPosts: React.FC<{ blogs: BlogPost[] }> = ({ blogs }) => {
 						{/* Featured cards */}
 						<div className="space-y-6">
 							{blogs.slice(0, 2).map((post) => (
-								<div
-									key={post.$id}
-									className="rounded-xl p-4 lg:max-w-[416px] overflow-hidden bg-[#ad8330d2] text-white cursor-pointer group"
-								>
-									<div className="h-48 overflow-hidden">
-										<Image
-											src={post.imageUrl}
-											alt={post.title}
-											width={300}
-											height={192}
-											className="w-full h-full rounded-xl object-cover transform transition-transform group-hover:scale-105"
-										/>
-									</div>
-									<div className="py-4">
-										<div className="flex items-center gap-x-3 text-sm mb-2 font-semibold">
-											<span className="max-w-[60px]">
-												{post.category.trim()}
-											</span>
-											<span className="text-4xl">•</span>
-											<span>{formatDate(post.date)}</span>
+								<Link href={`/sustainability/${post.$id}`} key={post.$id} className=''>
+									<div className="rounded-xl p-4 lg:max-w-[416px] overflow-hidden bg-[#ad8330d2] text-white cursor-pointer group mt-8">
+										<div className="h-48 overflow-hidden">
+											<Image
+												src={post.imageUrl}
+												alt={post.title}
+												width={300}
+												height={192}
+												className="w-full h-full rounded-xl object-cover transform transition-transform group-hover:scale-105"
+											/>
 										</div>
-										<h3 className="font-bold text-xl mb-2">{post.title}</h3>
-										<p className="text-sm">{post.description}</p>
+										<div className="py-4">
+											<div className="flex items-center gap-x-3 text-sm mb-2 font-semibold">
+												<span className="max-w-[60px]">
+													{post.category.trim()}
+												</span>
+												<span className="text-4xl">•</span>
+												<span>{formatDate(post.date)}</span>
+											</div>
+											<h3 className="font-bold text-xl mb-2">{post.title}</h3>
+											<p className="text-sm">{post.description}</p>
+										</div>
 									</div>
-								</div>
+								</Link>
 							))}
 						</div>
 					</div>

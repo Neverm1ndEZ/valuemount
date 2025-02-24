@@ -8,7 +8,6 @@ async function fetchBlogs() {
 
 export default async function Sustainability() {
 	const blogs = await fetchBlogs();
-
 	return (
 		<div>
 			<FeaturedPosts
@@ -19,6 +18,7 @@ export default async function Sustainability() {
 						date: doc.date,
 						description: doc.description,
 						imageUrl: doc.imageUrl,
+						content: doc.content,
 						$id: doc.$id,
 						$createdAt: doc.$createdAt,
 						$updatedAt: doc.$updatedAt,

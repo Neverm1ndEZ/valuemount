@@ -82,7 +82,7 @@ const NewsTimeline: React.FC<NewsTimelineProps> = ({ news }) => {
 											<div className="w-full md:w-32 h-48 md:h-32 overflow-hidden rounded-lg">
 												<Image
 													src={item.imageUrl}
-													alt={item.title}
+													alt={item?.title}
 													width={384}
 													height={384}
 													className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
