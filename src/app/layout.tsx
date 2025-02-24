@@ -50,8 +50,8 @@ export default function RootLayout({
 			<body
 				className={`${cabinet.variable} ${gilroy.variable} antialiased font-main`}
 			>
-				<Navbar />
 				<SplashScreenWrapper>
+					<Navbar />
 					<div className="mt-40 lg:mt-32">{children}</div>
 				</SplashScreenWrapper>
 				<Footer />
