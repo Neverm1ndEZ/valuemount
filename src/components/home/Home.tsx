@@ -9,6 +9,7 @@ import Purification from "./processes/Purification";
 import QualityTesting from "./processes/QualityTesting";
 import ShapingExcellence from "./processes/ShapingExcellence";
 import WhyValueMount from "./WhyValueMount";
+import Footer from "../Footer";
 
 // Define our section components in the order we want them to appear
 const SECTION_COMPONENTS = [
@@ -19,6 +20,7 @@ const SECTION_COMPONENTS = [
 	{ id: "shaping-excellence", Component: ShapingExcellence },
 	{ id: "delivery-with-trust", Component: DeliveryWithTrust },
 	{ id: "why-value-mount", Component: WhyValueMount },
+	{ id: "footer", Component: Footer },
 ];
 
 export default function Home() {
