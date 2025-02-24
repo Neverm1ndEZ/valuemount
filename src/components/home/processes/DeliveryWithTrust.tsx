@@ -17,7 +17,7 @@ export default function DeliveryWithTrust() {
 							Our Processes
 						</h1>
 					</div>
-					<div className="w-[150px] md:w-[250px]">
+					<div className="w-[105px] md:w-[250px]">
 						<Image
 							src={"/five.gif"}
 							alt={"page number"}
@@ -37,7 +37,7 @@ export default function DeliveryWithTrust() {
 							alt="Delivery with Trust"
 							width={480}
 							height={510}
-							className="w-full max-w-[480px] h-auto mx-auto"
+							className="w-full max-w-[374px] md:max-w-[480px] h-auto mx-auto"
 						/>
 					</div>
 					<div className="grid justify-between h-full pt-4 w-full md:w-auto">

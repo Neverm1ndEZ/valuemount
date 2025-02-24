@@ -17,7 +17,7 @@ export default function ShapingExcellence() {
 							Our Processes
 						</h1>
 					</div>
-					<div className="w-[150px] md:w-[250px]">
+					<div className="w-[105px] md:w-[250px]">
 						<Image
 							src={"/four.gif"}
 							alt={"page number"}
@@ -37,7 +37,7 @@ export default function ShapingExcellence() {
 							alt="Shaping Excellence"
 							width={480}
 							height={510}
-							className="w-full max-w-[480px] h-auto mx-auto"
+							className="w-full max-w-[374px] md:max-w-[480px] h-auto mx-auto"
 						/>
 					</div>
 					<div className="grid justify-between h-full pt-4 w-full md:w-auto">
