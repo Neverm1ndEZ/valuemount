@@ -30,7 +30,7 @@ export default function Purification() {
 				</div>
 
 				{/* Main content with responsive layout */}
-				<div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-20 w-full gap-6 mt-6">
+				<div className="flex flex-col md:flex-row items-center md:items-start justify-center md:gap-32 w-full gap-6 mt-6">
 					<div className="w-full md:w-auto">
 						<Image
 							src={"/purification.svg"}
