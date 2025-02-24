@@ -6,7 +6,6 @@ import Purification from "./processes/Purification";
 import QualityTesting from "./processes/QualityTesting";
 import ShapingExcellence from "./processes/ShapingExcellence";
 import WhyValueMount from "./WhyValueMount";
-import SectionNavigator from "./SectionNavigator";
 import Head from "next/head";
 
 export default function Home() {
@@ -21,8 +20,6 @@ export default function Home() {
 				<link rel="preload" href="/home-carousel/2-poster.png" as="image" />
 				<link rel="preload" href="/home-carousel/4-poster.png" as="image" />
 			</Head>
-			{/* Add the SectionNavigator */}
-			{/* <SectionNavigator /> */}
 
 			{/* No need for wrapper divs since you've added IDs directly to components */}
 			<div id="hero">
