@@ -52,9 +52,18 @@ export default function Navbar() {
 			ref={menuRef}
 			className="relative px-4 md:px-10 py-3 flex items-center justify-between border-b border-[#AD8330]"
 		>
-			<div>
+			<div className="flex items-center">
 				<Link href="/">
-					<Image src={"/logo.svg"} alt="ValueMount" width={150} height={100} />
+					{/* Wrap the logo in a container that scales responsively */}
+					<div className="relative w-[150px] h-[110px] md:w-[180px] md:h-[130px]">
+						<Image
+							src="/logo.svg"
+							alt="ValueMount"
+							fill
+							className="object-contain"
+							sizes="(max-width: 768px) 150px, 180px"
+						/>
+					</div>
 				</Link>
 			</div>
 

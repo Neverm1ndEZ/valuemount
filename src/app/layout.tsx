@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Suspense } from "react";
-import SplashScreen from "@/components/SplashScreen";
 import Footer from "@/components/Footer";
+import SplashScreenWrapper from "@/components/SplashScreenWrapper";
 
 // Configure Cabinet Grotesk as the main font
 const cabinet = localFont({
@@ -52,9 +51,9 @@ export default function RootLayout({
 				className={`${cabinet.variable} ${gilroy.variable} antialiased font-main`}
 			>
 				<Navbar />
-				<Suspense fallback={<SplashScreen />}>
-					<div className="mt-24 lg:mt-32">{children}</div>
-				</Suspense>
+				<SplashScreenWrapper>
+					<div className="mt-40 lg:mt-32">{children}</div>
+				</SplashScreenWrapper>
 				<Footer />
 			</body>
 		</html>

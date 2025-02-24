@@ -7,7 +7,7 @@ export default function ShapingExcellence() {
 	return (
 		<section
 			id="shaping-excellence"
-			className="min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-0"
+			className="min-h-screen flex flex-col justify-center items-center space-y-6 md:space-y-10 sticky top-32 md:top-10"
 		>
 			<div className="bg-white p-4 w-full max-w-7xl">
 				{/* Responsive header section */}
@@ -30,7 +30,7 @@ export default function ShapingExcellence() {
 				</div>
 
 				{/* Main content with responsive layout */}
-				<div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-6 mt-6">
+				<div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-20 w-full gap-6 mt-6">
 					<div className="w-full md:w-auto">
 						<Image
 							src={"/se.svg"}
