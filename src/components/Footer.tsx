@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,40 +8,20 @@ export default function Footer() {
 		<footer className="py-8 border-t border-[#AD8330] relative">
 			<div className="container mx-auto px-4">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					<div>
-						<h3 className="font-bold mb-4">Products</h3>
-						<ul>
-							<li>
-								<Link href="/digital-gold">Digital Gold</Link>
-							</li>
-							<li>
-								<Link href="/refineries">Refineries</Link>
-							</li>
-							<li>
-								<Link href="/trustee-certificate">Trustee Certificate</Link>
-							</li>
-							<li>
-								<Link href="/digital-silver">Digital Silver</Link>
-							</li>
-							<li>
-								<Link href="/spot">SPOT</Link>
-							</li>
-						</ul>
+				<div className="col-span-2">
+						<div className="flex items-center gap-6"> {/* Added flex container */}
+							<Image src={'/logo.svg'} width={200} height={240} alt="Value Mount Lixiviate" />
+							<div className="mt-2 space-y-2"> {/* Added spacing container */}
+								<h1 className="text-lg font-semibold text-gray-700">
+									Refining Gold with Precision and Integrity
+								</h1>
+								<p className="text-sm text-gray-600">
+									336 Olin Estates, Sheldontown, KS 78508-7791
+								</p>
+							</div>
+						</div>
 					</div>
-					<div>
-						<h3 className="font-bold mb-4">Services</h3>
-						<ul>
-							<li>
-								<Link href="/gold-loans">Gold Loans</Link>
-							</li>
-							<li>
-								<Link href="/sell-old-gold">Sell Old Gold</Link>
-							</li>
-							<li>
-								<Link href="/shop-jewellery">Shop Jewellery</Link>
-							</li>
-						</ul>
-					</div>
+
 					<div>
 						<h3 className="font-bold mb-4">Company</h3>
 						<ul>
@@ -85,16 +66,6 @@ export default function Footer() {
 				<div className="mt-8 text-center">
 					<p>&copy; {year} Value Mount Lixiviate | All Rights Reserved</p>
 				</div>
-			</div>
-			{/* Developed by section */}
-			<div className="absolute bottom-2 right-2 text-sm text-gray-500">
-				Developed by{" "}
-				<Link
-					href="https://github.com/Neverm1ndEZ"
-					className="text-[#AD8330] hover:underline"
-				>
-					Neverm1ndEZ
-				</Link>
 			</div>
 		</footer>
 	);
