@@ -54,7 +54,7 @@ export default function Navbar() {
 		>
 			<div>
 				<Link href="/">
-					<Image src={"/logo.svg"} alt="ValueMount" width={100} height={100} />
+					<Image src={"/logo.svg"} alt="ValueMount" width={150} height={100} />
 				</Link>
 			</div>
 
